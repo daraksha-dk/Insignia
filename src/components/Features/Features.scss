@@ -1,0 +1,105 @@
+.Features {
+  padding: 93px 154px 188px 109px;
+  .heading {
+    margin: 0;
+    @include df(700, 40px, $primary-color);
+    line-height: 1;
+    margin-bottom: 88px;
+  }
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
+  border: 1px solid #272829;
+  box-shadow: inset 2px 2px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  margin-bottom: 157px;
+
+  .features-list {
+    @include fc(1, 0);
+    gap: 45px;
+    user-select: none;
+    // slider indicators
+    .tns-outer {
+      position: relative;
+      left: 0;
+      & > button {
+        display: none;
+      }
+
+      .tns-nav {
+        position: absolute;
+        left: 0;
+        bottom: -80px;
+        text-align: center;
+        @include fc;
+
+        button {
+          border-radius: 50%;
+          background-color: $white;
+          width: 5px;
+          height: 5px;
+          border: none;
+          margin: 0 4.5px;
+          padding: 0;
+          &.tns-nav-active {
+            width: 10px;
+            height: 10px;
+            background-color: #f063b8;
+          }
+        }
+      }
+    }
+
+    .feature {
+      display: inline-flex !important;
+      align-items: center;
+      flex-direction: column;
+      background: #212121;
+      box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.25),
+        -9px -9px 10px rgba(75, 93, 104, 0.1);
+      border-radius: 50px;
+      padding: 50px !important;
+      padding-bottom: 75px;
+      width: 405px !important;
+      margin-right: 45px;
+
+      // width: 60vw;
+      // padding-left: 10vw;
+      // padding-right: 10vw;
+
+      .feature-icon {
+        max-width: 240px;
+        max-height: 240px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .feature-content {
+        .title {
+          @include df(700, 24px, $primary-color);
+          font-size: 24px;
+          line-height: 1.3;
+          margin-bottom: 26px;
+        }
+        .desc {
+          font-size: 16px;
+          line-height: 1.6;
+          color: $white;
+          min-height: 160px;
+        }
+        .cta {
+          @include fc;
+          gap: 16px;
+          border: none;
+          background-color: transparent;
+          font-weight: 600;
+          font-size: 16px;
+          color: $primary-color;
+        }
+      }
+
+      // &.tns-item.tns-slide-active {
+      // background: red;
+      // }
+    }
+  }
+}

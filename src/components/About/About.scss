@@ -1,0 +1,39 @@
+.about {
+  @include fc(1, 0);
+  max-height: 560px;
+  margin-left: 8%;
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
+  border: 2px solid #272829;
+  box-shadow: inset 2px 2px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  gap: 98px;
+  padding: 104px 96px 130px 55px;
+  margin-bottom: 185px;
+
+  .about-img img {
+    margin: 0;
+  }
+
+  .content {
+    max-width: 430px;
+
+    &-heading {
+      @include df(700, 40px, $primary-color);
+      line-height: 1.1;
+      margin: 0;
+      margin-bottom: 51px;
+      margin-top: -20px;
+      max-width: 420px;
+    }
+
+    &-para {
+      font-size: 18px;
+      line-height: 1.6;
+      color: $white;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

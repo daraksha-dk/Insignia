@@ -1,0 +1,50 @@
+.download {
+  position: relative;
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
+  border: 1px solid #272829;
+  box-shadow: inset 2px 2px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  padding: 109px;
+  padding-left: 93px;
+  padding-bottom: 96px;
+  margin-bottom: 161px;
+
+  &-content {
+    .head {
+      @include df(700, 40px, $primary-color);
+      line-height: 1.3;
+      margin: 0;
+      margin-bottom: 37px;
+    }
+    .para {
+      width: 474px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: $white;
+    }
+
+    .download-btn {
+      border-radius: 50px;
+      width: 271px;
+      height: 76px;
+      background: $bg-color;
+      border: none;
+      box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.25),
+        -3px -3px 8px rgba(75, 93, 104, 0.1);
+      border-radius: 50px;
+
+      font-size: 24px;
+      line-height: 1.6;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+
+  &-img {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 800px;
+    transform: translate(10%, -20%);
+  }
+}

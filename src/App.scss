@@ -1,0 +1,96 @@
+@import url("https://fontlibrary.org//face/now");
+// Variables
+// --------------------------------------------------
+:root {
+  --primary-color: #30fbef;
+  --bg-color: #282828;
+  --primary-font: "Now", sans-serif;
+}
+
+// color
+$primary-color: var(--primary-color);
+$bg-color: var(--bg-color);
+$white: #fff;
+
+// font
+$primary-font: var(--primary-font);
+
+// font-size
+$base-size: 16px;
+
+// Mixins
+// --------------------------------------------------
+@mixin flex-centered($a: 1, $j: 1) {
+  display: flex;
+  @if ($a==1) {
+    align-items: center;
+  }
+  @if ($j==1) {
+    justify-content: center;
+  }
+}
+
+@mixin fit-img {
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+@mixin defaultFont($wt, $size, $clr: inherit) {
+  font: $wt $size $primary-font;
+  color: $clr;
+}
+
+// aliases
+@mixin fc($a: 1, $j: 1) {
+  @include flex-centered($a, $j);
+}
+
+@mixin f-i {
+  @include fit-img;
+}
+
+@mixin df($wt, $size, $clr: inherit) {
+  @include defaultFont($wt, $size, $clr);
+}
+
+html,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app {
+  background: #292928;
+  width: 100%;
+  height: 100%;
+
+  &_container {
+    margin: 0 15%;
+
+    & > div {
+      width: 100%;
+    }
+  }
+}

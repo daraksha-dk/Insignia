@@ -1,0 +1,55 @@
+.Navbar {
+  @include fc(1, 0);
+  justify-content: space-between;
+
+  padding-top: 67px;
+  margin: 0 9.375%;
+  margin-bottom: 130px;
+
+  &_logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    .logo {
+      width: 60px;
+      height: 60px;
+
+      &-name {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 41.6px;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &_links {
+    @include fc(1, 0);
+    justify-content: space-between;
+
+    .nav-item {
+      text-decoration: none;
+      font-size: 16px;
+      color: $white;
+      margin-left: 42px;
+
+      &.active {
+        color: $primary-color;
+      }
+    }
+
+    .request-btn {
+      @include fc;
+      gap: 19px;
+      margin-left: 43px;
+      font-size: 16px;
+      color: $primary-color;
+      padding: 17px 29px;
+      background: $bg-color;
+      border: none;
+      box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.25),
+        -3px -3px 8px rgba(75, 93, 104, 0.1);
+      border-radius: 50px;
+    }
+  }
+}
